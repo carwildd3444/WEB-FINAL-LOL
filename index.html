@@ -3,69 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pon</title>
+    <title>Final</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
             margin: 20px;
-           
+            
         }
- 
- 
+
+
         header {
             padding: 10px;
             display: flex;
             align-items: center;
             border-bottom: 2px solid rgb(186, 186, 186);
         }
- 
+
         footer {
-           
+            
             padding: 10px;
             text-align: center;
         }
- 
- 
+
+
         footer a {
             text-decoration: none;
             display: inline-block;
             border: 1px solid black;
             border-radius: 50%;
-            padding: 8px;  
- 
+            padding: 8px;   
+
             height: 30px;
             width: 30px;
         }
- 
+
         footer a img {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
- 
+
         footer a:hover {
             background-color: rgba(0, 0, 0, 0.1);
         }
- 
- 
+
+
         nav ul {
             list-style-type: none;
         }
- 
+
         nav ul li {
             display: inline-block;
         }
- 
+
         nav a {
             text-decoration: none;
             color: rgb(46, 46, 46);
             padding: 10px;
             margin: 0 10px;
- 
+
             display: block;
         }
- 
+
         .move-right {
             margin-left: auto;
         }
@@ -73,24 +73,24 @@
             display: flex;
             border-bottom: 1px solid gray;
         }
- 
+
         main .container .left-block {
             padding: 60px;
             flex-basis: 50%;
             box-sizing: border-box;
         }
- 
+
         main .container .right-block {
             flex-basis: 50%;
             /* background-color: red; */
         }
- 
+
         main .container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
- 
+
         main .container .btn {
             font-family: Arial, Helvetica, sans-serif;
             border: 1px solid rgb(182, 182, 182);
@@ -99,46 +99,42 @@
             border-radius: 3px;
             display: inline-block;
         }
-        .Sigma{
- 
-            margin: 56px;
-        }
- 
- 
- 
+        
+
+
         main .container2 {
             display: flex;
             border-bottom: 1px solid gray;
          
         }
- 
+
         main .container2 .left-block2 {
             padding: 60px;
             flex-basis: 50%;
             box-sizing: border-box;
         }
- 
+
         main .container2 .right-block2 {
             flex-basis: 38%;
-           
+            
         }
- 
+
         main .container2 img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
- 
+
         main .container2 .btn2 {
             font-family: Arial, Helvetica, sans-serif;
             border: 1px solid rgb(182, 182, 182);
             text-align: center;
             padding: 6px;
             border-radius: 3px;
-            display: inline-block;
+            display: inline-block; 
         }
- 
- 
+
+
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -147,66 +143,66 @@
             gap: 1px;
             margin: 50px;
         }
- 
- 
+
+
         .grid>div {
             text-align: center;
             padding: 30px;
             padding-bottom: 10px;
             background: white;
         }
- 
+
         .Maga {
- 
+
             text-align: center;
         }
- 
+
         .gallery {
             display: flex;
             height: 200px;
-            margin: 60px;
-   
+            overflow: hidden;
+    
         }
- 
+
         .gallery img {
             object-fit: cover;
                 flex-grow: 1;
- 
+
         }
- 
+
        
- 
+
         .Magaa {
             text-align: center;
             font-weight: normal;
         }
- 
+
         form {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            padding: 210px;
+            padding: 15%;
             padding-top: 20px;
-           
-           
+            
+            
         }
- 
+
         form .column-3 {
             display: flex;
             justify-content: space-between;
             gap: 20px;
         }
- 
+
         form .column-3>* {
             flex-grow: 1;
         }
- 
+
         form .column-3 input {
             width: 100%;
             box-sizing: border-box;
             margin: 5px 0;
         }
- 
+
         form select {
             width: 100%;
             margin: 5px 0;
@@ -220,267 +216,334 @@
             text-align: center;
             padding: 6px;
             border-radius: 3px;
-            display: inline-block;
- 
+            display: inline-block; 
+
         }
- 
+
         .btn-block {
             text-align: right;
         }
- 
- 
- 
-       
+
+         @media (max-width: 850px) {
+            .move-right {
+                display: none;
+            }
+            
+            main .container .right-block2,
+            main .container .left-block2 {
+                flex-basis: 50%;
+                
+            }
+
+            .gallery img {
+                display: none;
+                flex-basis: 50%;
+            }
+
+            .gallery img:nth-last-child(1),
+            .gallery img:nth-last-child(2) {    
+                display: block;
+                flex-shrink: 0;
+            }
+            .grid{
+                grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            }
+            main .container2 .right-block2 {
+            flex-basis: 50%;
+            
+        }
+        
+        }
+        @media (max-width: 600px){
+            nav ul li{
+                display: none;
+            }
+             main .container {
+                flex-direction: column-reverse;
+            }
+            
+            main .container2{
+                flex-direction: column;
+            }
+            .gallery img:nth-last-child(2)
+            {
+                display: none;
+                flex-shrink: 0;
+            }
+            .gallery img:nth-last-child(1){
+                width: 100%;
+            }
+            .grid{
+                grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            }
+            
+           
+            @media (max-width: 600px) {
+            form .column-3 {
+                flex-direction: column;
+            }
+        }
+
+
+
+
+        }
+
+
+  
+        
     </style>
 </head>
 
 <body>
-   
-    <header>
-      <h2>Tour-Giude</h2>
-   
-      <nav>
-          <ul>
-              <li>
-                  <a href="index.php">
-                      Stories
-                  </a>
-              </li>
-              <li>
-                  <a href="add.php">
-                      Gallery
-                  </a>
-              </li>
-              <li>
-                  <a href="view.php">
-                      Features
-                  </a>
-              </li>
-              <li>
-                <a href="add.php">
-                  Write to us
+    
+  <header>
+    <h2>Tour-Giude</h2>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="index.php">
+                    Stories
                 </a>
             </li>
-          </ul>
-      </nav>
-      <nav class="move-right">
-          <ul>
-              <li>
-                  <a href="index.php">
-                    <i class="bi bi-twitter"></i></i>
-                  </a>
-              </li>
-              <li>
-                  <a href="add.php">
-                    <i class="bi bi-facebook"></i></i>
-                  </a>
-              </li>
-              <li>
-                  <a href="view.php">
-                    <i class="bi bi-instagram"></i></i>
-                  </a>
-              </li>
-              <li>
+            <li>
+                <a href="add.php">
+                    Gallery
+                </a>
+            </li>
+            <li>
                 <a href="view.php">
-                  <i class="bi bi-youtube"></i></i>
+                    Features
+                </a>
+            </li>
+            <li>
+              <a href="add.php">
+                Write to us
+              </a>
+          </li>
+        </ul>
+    </nav>
+    <nav class="move-right">
+        <ul>
+            <li>
+                <a href="index.php">
+                  <i class="bi bi-twitter"></i></i>
+                </a>
+            </li>
+            <li>
+                <a href="add.php">
+                  <i class="bi bi-facebook"></i></i>
+                </a>
+            </li>
+            <li>
+                <a href="view.php">
+                  <i class="bi bi-instagram"></i></i>
                 </a>
             </li>
             <li>
               <a href="view.php">
-                <i class="bi bi-envelope-fill"></i></i>
+                <i class="bi bi-youtube"></i></i>
               </a>
           </li>
-          </ul>
-      </nav>
-  </header>
-   
-   
-  <main>
-          <!-- main content -->
-      <div class="Sigma">
-          <div class="container">
-              <div class="left-block">
-                  <h2>Let's hit the road</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore velit libero harum necessitatibus,
-                      at
-                      hic dolorum assumenda eligendi dolor quibusdam reprehenderit tempora.</p>
-                  <p>
-                      <small>Odio quis excepturi ducimus
-                          blanditiis dolores in!</small>
-                  </p>
-                  <div class="btn">
-                      START
-                  </div>
-              </div>
-              <div class="right-block">
-                  <img src="./images/Screenshot 2025-03-24 132222.png" alt="">
-              </div>
-          </div>
-   
-   
-   
-          <div class="container2">
-              <div class="right-block2">
-                  <img src="./images/Screenshot 2025-03-24 132823.png" alt="">
-              </div>
-              <div class="left-block2">
-                  <h2>Story</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore velit libero harum necessitatibus,
-                      at
-                      hic dolorum assumenda eligendi dolor quibusdam reprehenderit tempora.</p>
-                  <p>
-                      <small>Odio quis excepturi ducimus
-                          blanditiis dolores in!</small>
-                  </p>
-                  <div class="btn2">
-                      More
-                  </div>
-              </div>
-          </div>
-   
-   
-          <div class="container">
-              <div class="left-block">
-                  <h2>Story</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore velit libero harum necessitatibus,
-                      at
-                      hic dolorum assumenda eligendi dolor quibusdam reprehenderit tempora.</p>
-                  <p>
-                      <small>Odio quis excepturi ducimus
-                          blanditiis dolores in!</small>
-                  </p>
-                  <div class="btn">
-                      More
-                  </div>
-              </div>
-              <div class="right-block">
-                  <img src="./images/Screenshot 2025-03-24 134959.png" alt="">
-              </div>
-          </div>
-      </div>
-   
-      </main>
-      <h2 class="Maga">Gallery</h2>
-      <section class="gallery">
-   
-          <img src="./images/on-the-shore-borrowdale-and-derwent-water-1518851.webp" alt="">
-   
-          <img src="./images/1713421064651.png" alt="">
-   
-          <img src= "./images/WOPA160517_D056-resized.jpg" alt="">
-   
-          <img src="./images/Zugpsitze_mountain.jpg" alt="">
-       
-   
-   
-   
-   
-   
-   
-   
-      </section>
-   
-  <h2 class="Maga">Fearles</h2>
-      <div class="grid">
-          <div>
-              <img src="./images/airplane-48.png" alt="">
-              <h4>One</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quo! dnjhjujdk kkdj</p>
-          </div>
-          <div>
-              <img src="./images/map_marker-48.png" alt="">
-              <h4>One</h4>
-              <p>Pariatur reiciendis ducimus ipsa est nam aut repudiandae velit similique.</p>
-          </div>
-          <div>
-              <img src="./images/movie-48.png" alt="">
-              <h4>One</h4>
-              <p>Voluptate fugit dicta hic, assumenda mollitia repudiandae nesciunt aperiam provident. faf fkkiowuj idikl jjfikkf</p>
-          </div>
-          <div>
-              <img src="./images/alarm_clock-48.png" alt="">
-              <h4>One</h4>
-              <p>Quae, repellendus assumenda error facere ducimus expedita quis maiores illo! oesoifh  ijpoh</p>
-          </div>
-          <div>
-              <img src="./images/face-48.png" alt="">
-              <h4>One</h4>
-              <p>Quae, repellendus assumenda error facere ducimus expedita quis maiores illo! fsef  e kkiujj </p>
-          </div>
-          <div>
-              <img src="./images/genius-48.png" alt="">
-              <h4>One</h4>
-              <p>Quae, repellendus assumenda error facere ducimus expedita quis maiores illo! adaddad ajffo ppmofm  opjf;lkmo  kj;ljo</p>
-          </div>
-      </div>
-   
-   
-   
-      <h2 class="Magaa">Write to us</h2>
-      <form>
-          <div class="column-3">
-              <label for="name">Name:
-                  <input type="text" id="name" name="name">
-              </label>
-              <label for="email">Email:
-                  <input type="email" id="email" name="email">
-              </label>
-              <label for="message">Message:
-                  <input type="tel" id="tel" name="tel">
-              </label>
-          </div>
-          <div>
-              <label>Contact me via: </label>
-              <input type="radio" name="contact">
-              <label for="">Email</label>
-              <input type="radio" name="contact">
-              <label for="">Phone</label>
-              <input type="radio" name="contact">
-              <label for="">Telegram</label>
-          </div>
-          <div>
-              <label>Topic:<br>
-                  <select>
-                      <option value="1">Post my story</option>
-                      <option value="2">Suggest an idea</option>
-                      <option value="3">Say something</option>
-                  </select>
-              </label>
-          </div>
-              <textarea rows="5"></textarea>
-          <div>
-              <input type="checkbox" name="human">
-              <label for="">I am a human</label>
-          </div>
-          <div class="btn-block">
-              <div class="btn3">
-                 SEND
-              </div>
-          </div>
-      </form>
-   
-   
-  <footer>
-      <div>
-          <a href="">
-              <img src="./images/twitter-128.png" alt="">
-          </a>
-          <a href="">
-              <img src= "./images/facebook-128.png"  alt="">
-          </a>
-          <a href="">
-              <img src= "./images/instagram-2-128.png" alt="">
-          </a>
-          <a href="">
-              <img src="./images/youtube-128.png" alt="">
-          </a>
-          <a href="">
-              <img src="./images/gmail-128.png" alt="">
-          </a>
-      </div>
-      <p>@ Untiteled 2019</p>
-  </footer>
-   
-   
-  </body>
-  </html>
+          <li>
+            <a href="view.php">
+              <i class="bi bi-envelope-fill"></i></i>
+            </a>
+        </li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+        <!-- main content -->
+    <div class="Sigma">
+        <div class="container">
+            <div class="left-block">
+                <h2>Let's hit the road</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore velit libero harum necessitatibus,
+                    at
+                    hic dolorum assumenda eligendi dolor quibusdam reprehenderit tempora.</p>
+                <p>
+                    <small>Odio quis excepturi ducimus
+                        blanditiis dolores in!</small>
+                </p>
+                <div class="btn">
+                    START
+                </div>
+            </div>
+            <div class="right-block">
+                <img src="./images/Screenshot 2025-03-24 132222.png" alt="">
+            </div>
+        </div>
+
+
+
+        <div class="container2">
+            <div class="right-block2">
+                <img src="./images/Screenshot 2025-03-24 132823.png" alt="">
+            </div>
+            <div class="left-block2">
+                <h2>Story</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore velit libero harum necessitatibus,
+                    at
+                    hic dolorum assumenda eligendi dolor quibusdam reprehenderit tempora.</p>
+                <p>
+                    <small>Odio quis excepturi ducimus
+                        blanditiis dolores in!</small>
+                </p>
+                <div class="btn2">
+                    More
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="left-block">
+                <h2>Story</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore velit libero harum necessitatibus,
+                    at
+                    hic dolorum assumenda eligendi dolor quibusdam reprehenderit tempora.</p>
+                <p>
+                    <small>Odio quis excepturi ducimus
+                        blanditiis dolores in!</small>
+                </p>
+                <div class="btn">
+                    More
+                </div>
+            </div>
+            <div class="right-block">
+                <img src="./images/Screenshot 2025-03-24 134959.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    </main>
+    <h2 class="Maga">Gallery</h2>
+    <section class="gallery">
+
+        <img src="./images/on-the-shore-borrowdale-and-derwent-water-1518851.webp" alt="">
+
+        <img src="./images/1713421064651.png" alt="">
+
+        <img src= "./images/WOPA160517_D056-resized.jpg" alt="">
+
+        <img src="./images/Zugpsitze_mountain.jpg" alt="">
+     
+
+
+
+
+
+
+
+    </section>
+
+<h2 class="Maga">Fearles</h2>
+    <div class="grid">
+        <div>
+            <img src="./images/airplane-48.png" alt="">
+            <h4>One</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quo! dnjhjujdk kkdj</p>
+        </div>
+        <div>
+            <img src="./images/map_marker-48.png" alt="">
+            <h4>One</h4>
+            <p>Pariatur reiciendis ducimus ipsa est nam aut repudiandae velit similique.</p>
+        </div>
+        <div>
+            <img src="./images/movie-48.png" alt="">
+            <h4>One</h4>
+            <p>Voluptate fugit dicta hic, assumenda mollitia repudiandae nesciunt aperiam provident. faf fkkiowuj idikl jjfikkf</p>
+        </div>
+        <div>
+            <img src="./images/alarm_clock-48.png" alt="">
+            <h4>One</h4>
+            <p>Quae, repellendus assumenda error facere ducimus expedita quis maiores illo! oesoifh  ijpoh</p>
+        </div>
+        <div>
+            <img src="./images/face-48.png" alt="">
+            <h4>One</h4>
+            <p>Quae, repellendus assumenda error facere ducimus expedita quis maiores illo! fsef  e kkiujj </p>
+        </div>
+        <div>
+            <img src="./images/genius-48.png" alt="">
+            <h4>One</h4>
+            <p>Quae, repellendus assumenda error facere ducimus expedita quis maiores illo! adaddad ajffo ppmofm  opjf;lkmo  kj;ljo</p>
+        </div>
+    </div>
+
+
+
+    <h2 class="Magaa">Write to us</h2>
+    <form>
+        <div class="column-3">
+            <label for="name">Name:
+                <input type="text" id="name" name="name">
+            </label>
+            <label for="email">Email:
+                <input type="email" id="email" name="email">
+            </label>
+            <label for="message">Message:
+                <input type="tel" id="tel" name="tel">
+            </label>
+        </div>
+        <div>
+            <label>Contact me via: </label>
+            <input type="radio" name="contact">
+            <label for="">Email</label>
+            <input type="radio" name="contact">
+            <label for="">Phone</label>
+            <input type="radio" name="contact">
+            <label for="">Telegram</label>
+        </div>
+        <div>
+            <label>Topic:<br>
+                <select>
+                    <option value="1">Post my story</option>
+                    <option value="2">Suggest an idea</option>
+                    <option value="3">Say something</option>
+                </select>
+            </label>
+        </div>
+            <textarea rows="5"></textarea>
+        <div>
+            <input type="checkbox" name="human">
+            <label for="">I am a human</label>
+        </div>
+        <div class="btn-block">
+            <div class="btn3">
+               SEND
+            </div>
+        </div>
+    </form>
+
+
+<footer>
+    <div>
+        <a href="">
+            <img src="./images/twitter-128.png" alt="">
+        </a>
+        <a href="">
+            <img src= "./images/facebook-128.png"  alt="">
+        </a>
+        <a href="">
+            <img src= "./images/instagram-2-128.png" alt="">
+        </a>
+        <a href="">
+            <img src="./images/youtube-128.png" alt="">
+        </a>
+        <a href="">
+            <img src="./images/gmail-128.png" alt="">
+        </a>
+    </div>
+    <p>@ Untiteled 2019</p>
+</footer>
+
+
+</body>
+</html>
